@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BaZil Placeholder.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bazil down0000" x="0" y="0" width="357" height="357"/>
+	<SubTexture name="bazil idle0000" x="357" y="0" width="521" height="101" frameX="0" frameY="-205" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0001" x="878" y="0" width="476" height="130" frameX="-22" frameY="-176" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0002" x="1354" y="0" width="432" height="159" frameX="-44" frameY="-147" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0003" x="0" y="357" width="387" height="189" frameX="-66" frameY="-117" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0004" x="387" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0005" x="595" y="357" width="297" height="247" frameX="-111" frameY="-59" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0006" x="892" y="357" width="253" height="276" frameX="-133" frameY="-30" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0007" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0008" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0009" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0010" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0011" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0012" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0013" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0014" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0015" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0016" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0017" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0018" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0019" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0020" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0021" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0022" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil idle0023" x="1145" y="357" width="208" height="306" frameX="-155" frameY="0" frameWidth="521" frameHeight="306"/>
+	<SubTexture name="bazil left0000" x="1353" y="357" width="359" height="359"/>
+	<SubTexture name="bazil right0000" x="0" y="716" width="358" height="358"/>
+	<SubTexture name="bazil up0000" x="358" y="716" width="350" height="350"/>
+</TextureAtlas>

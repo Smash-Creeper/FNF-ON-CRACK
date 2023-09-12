@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Kasssm.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Bitmap 2" x="0" y="0" width="337" height="636"/>
+	<SubTexture name="Bitmap 4" x="337" y="0" width="502" height="632"/>
+	<SubTexture name="Bitmap 5" x="839" y="0" width="600" height="600"/>
+	<SubTexture name="Bitmap 6" x="1439" y="0" width="600" height="600"/>
+	<SubTexture name="Bitmap 7" x="2039" y="0" width="815" height="600"/>
+	<SubTexture name="Kasssm D0000" x="1439" y="0" width="600" height="600"/>
+	<SubTexture name="Kasssm Down0000" x="2854" y="0" width="600" height="484" frameX="0" frameY="-116" frameWidth="600" frameHeight="600"/>
+	<SubTexture name="Kasssm Down0001" x="3454" y="0" width="600" height="523" frameX="0" frameY="-77" frameWidth="600" frameHeight="600"/>
+	<SubTexture name="Kasssm Down0002" x="0" y="636" width="600" height="562" frameX="0" frameY="-38" frameWidth="600" frameHeight="600"/>
+	<SubTexture name="Kasssm Down0003" x="1439" y="0" width="600" height="600"/>
+	<SubTexture name="Kasssm Down0004" x="1439" y="0" width="600" height="600"/>
+	<SubTexture name="Kasssm Down0005" x="1439" y="0" width="600" height="600"/>
+	<SubTexture name="Kasssm I0000" x="0" y="0" width="337" height="636"/>
+	<SubTexture name="Kasssm Idle0000" x="600" y="636" width="398" height="560" frameX="0" frameY="-76" frameWidth="398" frameHeight="636"/>
+	<SubTexture name="Kasssm Idle0001" x="998" y="636" width="378" height="586" frameX="-10" frameY="-50" frameWidth="398" frameHeight="636"/>
+	<SubTexture name="Kasssm Idle0002" x="1376" y="636" width="358" height="610" frameX="-20" frameY="-26" frameWidth="398" frameHeight="636"/>
+	<SubTexture name="Kasssm Idle0003" x="0" y="0" width="337" height="636" frameX="-30" frameY="0" frameWidth="337" frameHeight="636"/>
+	<SubTexture name="Kasssm Idle0004" x="0" y="0" width="337" height="636" frameX="-30" frameY="0" frameWidth="337" frameHeight="636"/>
+	<SubTexture name="Kasssm Idle0005" x="0" y="0" width="337" height="636" frameX="-30" frameY="0" frameWidth="337" frameHeight="636"/>
+	<SubTexture name="Kasssm Idle0006" x="0" y="0" width="337" height="636" frameX="-30" frameY="0" frameWidth="337" frameHeight="636"/>
+	<SubTexture name="Kasssm Idle0007" x="0" y="0" width="337" height="636" frameX="-30" frameY="0" frameWidth="337" frameHeight="636"/>
+	<SubTexture name="Kasssm Idle0008" x="0" y="0" width="337" height="636" frameX="-30" frameY="0" frameWidth="337" frameHeight="636"/>
+	<SubTexture name="Kasssm Idle0009" x="0" y="0" width="337" height="636" frameX="-30" frameY="0" frameWidth="337" frameHeight="636"/>
+	<SubTexture name="Kasssm Idle0010" x="0" y="0" width="337" height="636" frameX="-30" frameY="0" frameWidth="337" frameHeight="636"/>
+	<SubTexture name="Kasssm Idle0011" x="0" y="0" width="337" height="636" frameX="-30" frameY="0" frameWidth="337" frameHeight="636"/>
+	<SubTexture name="Kasssm Idle0012" x="0" y="0" width="337" height="636" frameX="-30" frameY="0" frameWidth="337" frameHeight="636"/>
+	<SubTexture name="Kasssm Idle0013" x="0" y="0" width="337" height="636" frameX="-30" frameY="0" frameWidth="337" frameHeight="636"/>
+	<SubTexture name="Kasssm Idle0014" x="0" y="0" width="337" height="636" frameX="-30" frameY="0" frameWidth="337" frameHeight="636"/>
+	<SubTexture name="Kasssm L0000" x="839" y="0" width="600" height="600"/>
+	<SubTexture name="Kasssm Left0000" x="1734" y="636" width="715" height="601" frameX="0" frameY="-2" frameWidth="715" frameHeight="603"/>
+	<SubTexture name="Kasssm Left0001" x="2449" y="636" width="677" height="603" frameX="-38" frameY="0" frameWidth="715" frameHeight="603"/>
+	<SubTexture name="Kasssm Left0002" x="3126" y="636" width="638" height="603" frameX="-77" frameY="0" frameWidth="715" frameHeight="603"/>
+	<SubTexture name="Kasssm Left0003" x="0" y="1246" width="601" height="601" frameX="-114" frameY="-2" frameWidth="715" frameHeight="603"/>
+	<SubTexture name="Kasssm Left0004" x="0" y="1246" width="601" height="601" frameX="-114" frameY="-2" frameWidth="715" frameHeight="603"/>
+	<SubTexture name="Kasssm Left0005" x="0" y="1246" width="601" height="601" frameX="-114" frameY="-2" frameWidth="715" frameHeight="603"/>
+	<SubTexture name="Kasssm R0000" x="337" y="0" width="502" height="632"/>
+	<SubTexture name="Kasssm Right0000" x="601" y="1246" width="602" height="633" frameX="0" frameY="-1" frameWidth="602" frameHeight="634"/>
+	<SubTexture name="Kasssm Right0001" x="1203" y="1246" width="570" height="634" frameX="0" frameY="0" frameWidth="602" frameHeight="634"/>
+	<SubTexture name="Kasssm Right0002" x="1773" y="1246" width="537" height="634" frameX="0" frameY="0" frameWidth="602" frameHeight="634"/>
+	<SubTexture name="Kasssm Right0003" x="2310" y="1246" width="505" height="633" frameX="0" frameY="-1" frameWidth="602" frameHeight="634"/>
+	<SubTexture name="Kasssm Right0004" x="2310" y="1246" width="505" height="633" frameX="0" frameY="-1" frameWidth="602" frameHeight="634"/>
+	<SubTexture name="Kasssm Right0005" x="2310" y="1246" width="505" height="633" frameX="0" frameY="-1" frameWidth="602" frameHeight="634"/>
+	<SubTexture name="Kasssm U0000" x="2039" y="0" width="815" height="600"/>
+	<SubTexture name="Kasssm Up0000" x="2815" y="1246" width="815" height="660" frameX="0" frameY="0" frameWidth="815" frameHeight="661"/>
+	<SubTexture name="Kasssm Up0001" x="0" y="1906" width="815" height="641" frameX="0" frameY="-20" frameWidth="815" frameHeight="661"/>
+	<SubTexture name="Kasssm Up0002" x="815" y="1906" width="815" height="621" frameX="0" frameY="-40" frameWidth="815" frameHeight="661"/>
+	<SubTexture name="Kasssm Up0003" x="2039" y="0" width="815" height="600" frameX="0" frameY="-60" frameWidth="815" frameHeight="600"/>
+	<SubTexture name="Kasssm Up0004" x="2039" y="0" width="815" height="600" frameX="0" frameY="-60" frameWidth="815" frameHeight="600"/>
+	<SubTexture name="Kasssm Up0005" x="2039" y="0" width="815" height="600" frameX="0" frameY="-60" frameWidth="815" frameHeight="600"/>
+</TextureAtlas>

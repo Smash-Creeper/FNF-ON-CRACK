@@ -1,5 +1,6 @@
 package;
 
+import Discord.DiscordClient;
 import flixel.graphics.FlxGraphic;
 #if desktop
 import Discord.DiscordClient;
@@ -143,9 +144,12 @@ class PlayState extends MusicBeatState
 	public static var isPixelStage:Bool = false;
 	public static var SONG:SwagSong = null;
 	public static var isStoryMode:Bool = false;
+	public static var isArenaMode:Bool = false;
+	public static var isSecretWeekMode:Bool = false;
 	public static var storyWeek:Int = 0;
 	public static var storyPlaylist:Array<String> = [];
 	public static var storyDifficulty:Int = 1;
+	public static var arenaDifficulty:String = "";
 
 	public var spawnTime:Float = 2000;
 
@@ -179,6 +183,8 @@ class PlayState extends MusicBeatState
 
 	public var gfSpeed:Int = 1;
 	public var health:Float = 1;
+	public var healthMax:Float = 3;
+	public var healthMaxDisplay:Float = 2;
 	public var combo:Int = 0;
 
 	private var healthBarBG:AttachedSprite;
@@ -417,7 +423,7 @@ class PlayState extends MusicBeatState
 		storyDifficultyText = CoolUtil.difficulties[storyDifficulty];
 
 		// String that contains the mode defined here so it isn't necessary to call changePresence for each mode
-		if (isStoryMode)
+		if (isStoryMode && !isArenaMode && !isSecretWeekMode)
 		{
 			detailsText = "Story Mode: " + WeekData.getCurrentWeek().weekName;
 		}
@@ -1124,8 +1130,8 @@ class PlayState extends MusicBeatState
 		add(healthBarBG);
 		if(ClientPrefs.downScroll) healthBarBG.y = 0.11 * FlxG.height;
 
-		healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8), this,
-			'health', 0, 2);
+		healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int((healthBarBG.width - 8)), Std.int(healthBarBG.height - 8), this,
+			'health', 0, healthMax);
 		healthBar.scrollFactor.set();
 		// healthBar
 		healthBar.visible = !ClientPrefs.hideHud;
@@ -1361,6 +1367,7 @@ class PlayState extends MusicBeatState
 	
 		#if desktop
 		// Updating Discord Rich Presence.
+		trace(detailsText + ", " + SONG.song + " (" + storyDifficultyText + "), "+ iconP2.getCharacter());
 		DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 		#end
 
@@ -2878,7 +2885,6 @@ class PlayState extends MusicBeatState
 			iconP1.swapOldIcon();
 		}*/
 		callOnLuas('onUpdate', [elapsed]);
-
 		switch (curStage)
 		{
 			case 'tank':
@@ -3051,18 +3057,20 @@ class PlayState extends MusicBeatState
 		var mult:Float = FlxMath.lerp(1, iconP1.scale.x, CoolUtil.boundTo(1 - (elapsed * 9 * playbackRate), 0, 1));
 		iconP1.scale.set(mult, mult);
 		iconP1.updateHitbox();
+		iconP1.flipX = healthBar.flipX;
 
 		var mult:Float = FlxMath.lerp(1, iconP2.scale.x, CoolUtil.boundTo(1 - (elapsed * 9 * playbackRate), 0, 1));
 		iconP2.scale.set(mult, mult);
 		iconP2.updateHitbox();
+		iconP2.flipX = healthBar.flipX;
 
 		var iconOffset:Int = 26;
 
-		iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (150 * iconP1.scale.x - 150) / 2 - iconOffset;
-		iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (150 * iconP2.scale.x) / 2 - iconOffset * 2;
+		iconP1.x = healthBar.x + ((healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (150 * iconP1.scale.x - 150 * (healthBar.flipX ? 2 : 1)) / 2 - iconOffset * (healthBar.flipX ? 2 : 1)) * (healthBar.flipX ? -1 : 1) + (healthBar.flipX ? healthBar.width : 0) - (healthBar.flipX ? 200 : 0);
+		iconP2.x = healthBar.x + ((healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (150 * iconP2.scale.x) / 2 - iconOffset * (healthBar.flipX ? 1 : 2)) * (healthBar.flipX ? -1 : 1) + (healthBar.flipX ? healthBar.width : 0) - (healthBar.flipX ? 100 : 0);
 
-		if (health > 2)
-			health = 2;
+		if (health > healthMax)
+			health = healthMax;
 
 		if (healthBar.percent < 20)
 			iconP1.animation.curAnim.curFrame = 1;
@@ -3318,6 +3326,10 @@ class PlayState extends MusicBeatState
 		}
 		#end
 
+		if(isArenaMode && FlxG.keys.justPressed.SHIFT){
+			endSong();
+		}
+
 		setOnLuas('cameraX', camFollowPos.x);
 		setOnLuas('cameraY', camFollowPos.y);
 		setOnLuas('botPlay', cpuControlled);
@@ -3389,10 +3401,10 @@ class PlayState extends MusicBeatState
 
 				// MusicBeatState.switchState(new GameOverState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 
-				#if desktop
+		//		#if desktop
 				// Game Over doesn't get his own variable because it's only used here
 				DiscordClient.changePresence("Game Over - " + detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
-				#end
+		//		#end
 				isDead = true;
 				return true;
 			}
@@ -3704,6 +3716,8 @@ class PlayState extends MusicBeatState
 			case 'Change Character':
 				var charType:Int = 0;
 				switch(value1.toLowerCase().trim()) {
+					case 'choice':
+						charType = 3;
 					case 'gf' | 'girlfriend':
 						charType = 2;
 					case 'dad' | 'opponent':
@@ -3767,6 +3781,7 @@ class PlayState extends MusicBeatState
 							}
 							setOnLuas('gfName', gf.curCharacter);
 						}
+	
 				}
 				reloadHealthBarColors();
 
@@ -3970,13 +3985,17 @@ class PlayState extends MusicBeatState
 				if (storyPlaylist.length <= 0)
 				{
 					WeekData.loadTheFirstEnabledMod();
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					FlxG.sound.playMusic(Paths.music('angusPlaceholder'));
 
 					cancelMusicFadeTween();
 					if(FlxTransitionableState.skipNextTransIn) {
 						CustomFadeTransition.nextCamera = null;
 					}
-					MusicBeatState.switchState(new StoryMenuState());
+					if(!isArenaMode){
+						MusicBeatState.switchState(new StoryMenuState());
+					}else{
+						MusicBeatState.switchState(new MainMenuState());
+					}
 
 					// if ()
 					if(!ClientPrefs.getGameplaySetting('practice', false) && !ClientPrefs.getGameplaySetting('botplay', false)) {
@@ -3994,41 +4013,81 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					var difficulty:String = CoolUtil.getDifficultyFilePath();
+					if(!isArenaMode){
+						var difficulty:String = CoolUtil.getDifficultyFilePath();
 
-					trace('LOADING NEXT SONG');
-					trace(Paths.formatToSongPath(PlayState.storyPlaylist[0]) + difficulty);
+						trace('LOADING NEXT SONG');
+						trace(Paths.formatToSongPath(PlayState.storyPlaylist[0]) + difficulty);
 
-					var winterHorrorlandNext = (Paths.formatToSongPath(SONG.song) == "eggnog");
-					if (winterHorrorlandNext)
-					{
-						var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
-							-FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
-						blackShit.scrollFactor.set();
-						add(blackShit);
-						camHUD.visible = false;
+						var winterHorrorlandNext = (Paths.formatToSongPath(SONG.song) == "eggnog");
+						if (winterHorrorlandNext)
+						{
+							var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
+								-FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+							blackShit.scrollFactor.set();
+							add(blackShit);
+							camHUD.visible = false;
 
-						FlxG.sound.play(Paths.sound('Lights_Shut_off'));
-					}
+							FlxG.sound.play(Paths.sound('Lights_Shut_off'));
+						}
 
-					FlxTransitionableState.skipNextTransIn = true;
-					FlxTransitionableState.skipNextTransOut = true;
+						FlxTransitionableState.skipNextTransIn = true;
+						FlxTransitionableState.skipNextTransOut = true;
 
-					prevCamFollow = camFollow;
-					prevCamFollowPos = camFollowPos;
+						prevCamFollow = camFollow;
+						prevCamFollowPos = camFollowPos;
+						
+						PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
+						FlxG.sound.music.stop();
 
-					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
-					FlxG.sound.music.stop();
-
-					if(winterHorrorlandNext) {
-						new FlxTimer().start(1.5, function(tmr:FlxTimer) {
+						if(winterHorrorlandNext) {
+							new FlxTimer().start(1.5, function(tmr:FlxTimer) {
+								cancelMusicFadeTween();
+								LoadingState.loadAndSwitchState(new PlayState());
+							});
+						} else {
 							cancelMusicFadeTween();
 							LoadingState.loadAndSwitchState(new PlayState());
-						});
-					} else {
-						cancelMusicFadeTween();
-						LoadingState.loadAndSwitchState(new PlayState());
+						}
+					}else{
+						var difficulty:String = arenaDifficulty;
+
+						trace('LOADING NEXT SONG');
+						trace(Paths.formatToSongPath(PlayState.storyPlaylist[0]) + arenaDifficulty);
+
+						var winterHorrorlandNext = (Paths.formatToSongPath(SONG.song) == "eggnog");
+						if (winterHorrorlandNext)
+						{
+							var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
+								-FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+							blackShit.scrollFactor.set();
+							add(blackShit);
+							camHUD.visible = false;
+
+							FlxG.sound.play(Paths.sound('Lights_Shut_off'));
+						}
+
+						FlxTransitionableState.skipNextTransIn = true;
+						FlxTransitionableState.skipNextTransOut = true;
+
+						prevCamFollow = camFollow;
+						prevCamFollowPos = camFollowPos;
+						
+						PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + arenaDifficulty, PlayState.storyPlaylist[0]);
+						FlxG.sound.music.stop();
+
+						if(winterHorrorlandNext) {
+							new FlxTimer().start(1.5, function(tmr:FlxTimer) {
+								cancelMusicFadeTween();
+								LoadingState.loadAndSwitchState(new PlayState());
+							});
+						} else {
+							cancelMusicFadeTween();
+							LoadingState.loadAndSwitchState(new PlayState());
+						}
 					}
+
+					
 				}
 			}
 			else
@@ -4040,7 +4099,7 @@ class PlayState extends MusicBeatState
 					CustomFadeTransition.nextCamera = null;
 				}
 				MusicBeatState.switchState(new FreeplayState());
-				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				FlxG.sound.playMusic(Paths.music('angusPlaceholder'));
 				changedDifficulty = false;
 			}
 			transitioning = true;

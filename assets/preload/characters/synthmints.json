@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				83,
+				68
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				-10
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				120,
+				5
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-31,
+				118
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				97
+			],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "AltUp2"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				60,
+				-60
+			],
+			"fps": 12,
+			"anim": "Shock",
+			"indices": [],
+			"name": "Surprise"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				-48
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Synth Mints New",
+	"position": [
+		0,
+		200
+	],
+	"healthicon": "synthmintsmain",
+	"flip_x": false,
+	"healthbar_colors": [
+		223,
+		0,
+		57
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

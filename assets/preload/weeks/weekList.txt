@@ -1,3 +1,7 @@
+crack
+freeplay
+covers
+smash
 tutorial
 week1
 week2

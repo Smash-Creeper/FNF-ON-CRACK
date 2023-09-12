@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-21,
+				11
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Sensai Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				10
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Sensai Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				88,
+				45
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Sensai Up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Sensai Idle"
+		},
+		{
+			"offsets": [
+				-8,
+				12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Sensai Left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Sensai_Assets",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		216,
+		85,
+		142
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

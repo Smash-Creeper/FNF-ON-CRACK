@@ -1,0 +1,49 @@
+{
+	"songs": [
+		[
+			"DROWNING",
+			"dad",
+			[
+				174,
+				72,
+				245
+			]
+		],
+		[
+			"pretender",
+			"dad",
+			[
+				174,
+				72,
+				245
+			]
+		],
+		[
+			"armageddon",
+			"dad",
+			[
+				174,
+				72,
+				245
+			]
+		]
+	],
+	"hideFreeplay": false,
+	"weekBackground": "tank",
+	"weekCharacters": [
+		"tankman",
+		"bf",
+		"gf"
+	],
+	"storyName": "Crackhouse",
+	"weekName": "Crack",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"difficulties": "hard",
+	"hideStoryMode": true,
+	"weekBefore": "week7",
+	"startUnlocked": true
+}

@@ -22,15 +22,31 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	public static var characterName:String = 'bf-dead';
 	public static var deathSoundName:String = 'fnf_loss_sfx';
-	public static var loopSoundName:String = 'gameOver';
+	public static var loopSoundName:String = 'bazil_theme';
 	public static var endSoundName:String = 'gameOverEnd';
+	public static var fadedelay:Float = 0.7;
+	public static var fadesped:Float = 2;
 
 	public static var instance:GameOverSubstate;
 
 	public static function resetVariables() {
-		characterName = 'bf-dead';
+		if (PlayState.SONG.player1 == 'bazil'){
+			characterName = 'bazil-dead';
+			loopSoundName = 'bazil_theme';
+			fadedelay = 2;
+			fadesped = 4.0;
+		}else if (PlayState.SONG.player1 == 'gb'){
+			characterName = 'bazil-dead';
+			loopSoundName = 'alonso_theme';
+			fadedelay = 0.7;
+			fadesped = 2;
+		}else{
+			characterName = 'bf-dead';
+			loopSoundName = 'gameOver';
+			fadedelay = 0.7;
+			fadesped = 2;
+		}
 		deathSoundName = 'fnf_loss_sfx';
-		loopSoundName = 'gameOver';
 		endSoundName = 'gameOverEnd';
 	}
 
@@ -153,6 +169,7 @@ class GameOverSubstate extends MusicBeatSubstate
 	}
 
 	var isEnding:Bool = false;
+	
 
 	function coolStartDeath(?volume:Float = 1):Void
 	{
@@ -167,9 +184,9 @@ class GameOverSubstate extends MusicBeatSubstate
 			boyfriend.playAnim('deathConfirm', true);
 			FlxG.sound.music.stop();
 			FlxG.sound.play(Paths.music(endSoundName));
-			new FlxTimer().start(0.7, function(tmr:FlxTimer)
+			new FlxTimer().start(fadedelay, function(tmr:FlxTimer)
 			{
-				FlxG.camera.fade(FlxColor.BLACK, 2, false, function()
+				FlxG.camera.fade(FlxColor.BLACK, fadesped, false, function()
 				{
 					MusicBeatState.resetState();
 				});

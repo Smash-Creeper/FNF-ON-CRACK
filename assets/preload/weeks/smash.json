@@ -1,0 +1,49 @@
+{
+	"songs": [
+		[
+			"against-the-sound",
+			"smash",
+			[
+				214,
+				13,
+				6
+			]
+		],
+		[
+			"encounter-with-angery-wavs",
+			"smash",
+			[
+				214,
+				13,
+				6
+			]
+		],
+		[
+			"ah",
+			"smash",
+			[
+				214,
+				13,
+				6
+			]
+		]
+	],
+	"difficulties": "Normal",
+	"hideFreeplay": false,
+	"weekBackground": "tank",
+	"weekCharacters": [
+		"tankman",
+		"bf",
+		"gf"
+	],
+	"storyName": "Smash",
+	"weekName": "Smash",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "week7",
+	"startUnlocked": true
+}

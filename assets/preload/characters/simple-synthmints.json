@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-62,
+				-41
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Syn Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				27,
+				-30
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Syn Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				24,
+				44
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Syn Up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Syn Idle"
+		},
+		{
+			"offsets": [
+				48,
+				91
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Syn Left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Simple Synth Mints",
+	"position": [
+		0,
+		-90
+	],
+	"healthicon": "synthmints",
+	"flip_x": true,
+	"healthbar_colors": [
+		69,
+		87,
+		58
+	],
+	"camera_position": [
+		-200,
+		120
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

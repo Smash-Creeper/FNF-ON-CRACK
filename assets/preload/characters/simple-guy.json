@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				238,
+				161
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "SG Right"
+		},
+		{
+			"offsets": [
+				-73,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "SG Down"
+		},
+		{
+			"offsets": [
+				54,
+				84
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "SG Up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "SG Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-62,
+				51
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "SG Left",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Simple Guy",
+	"position": [
+		0,
+		30
+	],
+	"healthicon": "test",
+	"flip_x": false,
+	"healthbar_colors": [
+		69,
+		87,
+		58
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

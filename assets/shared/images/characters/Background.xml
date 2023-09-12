@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Background.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="street0000" x="0" y="0" width="3074" height="355" frameX="-735" frameY="0" frameWidth="3809" frameHeight="355"/>
+	<SubTexture name="street0001" x="0" y="0" width="3074" height="355" frameX="-630" frameY="0" frameWidth="3809" frameHeight="355"/>
+	<SubTexture name="street0002" x="3074" y="0" width="3073" height="355" frameX="-525" frameY="0" frameWidth="3809" frameHeight="355"/>
+	<SubTexture name="street0003" x="0" y="0" width="3074" height="355" frameX="-420" frameY="0" frameWidth="3809" frameHeight="355"/>
+	<SubTexture name="street0004" x="3074" y="0" width="3073" height="355" frameX="-315" frameY="0" frameWidth="3809" frameHeight="355"/>
+	<SubTexture name="street0005" x="3074" y="0" width="3073" height="355" frameX="-210" frameY="0" frameWidth="3809" frameHeight="355"/>
+	<SubTexture name="street0006" x="3074" y="0" width="3073" height="355" frameX="-105" frameY="0" frameWidth="3809" frameHeight="355"/>
+	<SubTexture name="street0007" x="0" y="355" width="3071" height="355" frameX="0" frameY="0" frameWidth="3809" frameHeight="355"/>
+</TextureAtlas>

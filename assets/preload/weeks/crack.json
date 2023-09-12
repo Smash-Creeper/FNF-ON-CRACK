@@ -1,0 +1,67 @@
+{
+	"songs": [
+		[
+			"repeat",
+			"synthmintsmain",
+			[
+				214,
+				13,
+				6
+			]
+		],
+		[
+			"synth",
+			"synthmintsmain",
+			[
+				214,
+				13,
+				6
+			]
+		],
+		[
+			"ice",
+			"bobbymain",
+			[
+				250,
+				125,
+				248
+			]
+		],
+		[
+			"hes-got-a-gun",
+			"gb",
+			[
+				245,
+				233,
+				2
+			]
+		],
+		[
+			"i-just-got-shot",
+			"bazil",
+			[
+				32,
+				107,
+				57
+			]
+		]
+	],
+	"difficulties": "Easy,Normal,Hard,Snowgrave",
+	"hideFreeplay": false,
+	"weekBackground": "tank",
+	"weekCharacters": [
+		"tankman",
+		"bf",
+		"gf"
+	],
+	"storyName": "Crackhouse",
+	"weekName": "Crack",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "week7",
+	"startUnlocked": true
+}

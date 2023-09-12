@@ -85,7 +85,7 @@ class WeekData {
 		this.fileName = fileName;
 	}
 
-	public static function reloadWeekFiles(isStoryMode:Null<Bool> = false)
+	public static function reloadWeekFiles(isStoryMode:Null<Bool> = false, isArenaMode:Null<Bool> = false)
 	{
 		weeksList = [];
 		weeksLoaded.clear();
@@ -150,6 +150,7 @@ class WeekData {
 						if(weekFile != null && (isStoryMode == null || (isStoryMode && !weekFile.hideStoryMode) || (!isStoryMode && !weekFile.hideFreeplay))) {
 							weeksLoaded.set(sexList[i], weekFile);
 							weeksList.push(sexList[i]);
+							trace(weeksList);
 						}
 					}
 				}

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-104,
+				-12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "FaeRight"
+		},
+		{
+			"offsets": [
+				-102,
+				-55
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "FaeDown"
+		},
+		{
+			"offsets": [
+				-102,
+				41
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "FaeUp"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "FaeIdle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				54,
+				12
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "FaeLeft",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Faelo",
+	"position": [
+		0,
+		210
+	],
+	"healthicon": "faelo",
+	"flip_x": false,
+	"healthbar_colors": [
+		204,
+		220,
+		223
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

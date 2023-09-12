@@ -1,0 +1,61 @@
+{
+	"song": {
+		"events": [
+			[
+				23600,
+				[
+					[
+						"Change Scroll Speed",
+						"0.375",
+						"1"
+					],
+					[
+						"Camera Follow Pos",
+						"900",
+						"700"
+					]
+				]
+			],
+			[
+				25400,
+				[
+					[
+						"Change Scroll Speed",
+						"1.5",
+						"0.05"
+					]
+				]
+			],
+			[
+				25500,
+				[
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					]
+				]
+			],
+			[
+				31200,
+				[
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					]
+				]
+			],
+			[
+				32000,
+				[
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					]
+				]
+			]
+		]
+	}
+}

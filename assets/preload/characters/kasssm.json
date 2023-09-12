@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Kasssm Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				260,
+				27
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Kasssm Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				40
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Kasssm Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				-10
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Kasssm Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				189,
+				71
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Kasssm Up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Kasssm",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "mom",
+	"flip_x": false,
+	"healthbar_colors": [
+		216,
+		85,
+		142
+	],
+	"camera_position": [
+		-120,
+		180
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

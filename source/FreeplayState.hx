@@ -1,5 +1,6 @@
 package;
 
+import flixel.math.FlxPoint;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -45,6 +46,7 @@ class FreeplayState extends MusicBeatState
 	private var curPlaying:Bool = false;
 
 	private var iconArray:Array<HealthIcon> = [];
+	private var iconArrayBack:Array<HealthIcon> = [];
 
 	var bg:FlxSprite;
 	var intendedColor:Int;
@@ -111,29 +113,39 @@ class FreeplayState extends MusicBeatState
 
 		for (i in 0...songs.length)
 		{
-			var songText:Alphabet = new Alphabet(90, 320, songs[i].songName, true);
+			var songText:Alphabet = new Alphabet(640, 320, songs[i].songName, true);
 			songText.isMenuItem = true;
 			songText.targetY = i - curSelected;
+			songText.alignment = CENTERED;
 			grpSongs.add(songText);
-
+			var csongwidth = songText.width;
 			var maxWidth = 980;
 			if (songText.width > maxWidth)
 			{
+				songText.x = 600 + ((maxWidth * (maxWidth / songText.width)) / 2);
 				songText.scaleX = maxWidth / songText.width;
+				csongwidth = maxWidth;
 			}
-			songText.snapToPosition();
+			songText.distancePerItem = new FlxPoint(0, 120);
 
 			Paths.currentModDirectory = songs[i].folder;
 			var icon:HealthIcon = new HealthIcon(songs[i].songCharacter);
 			icon.sprTracker = songText;
+			icon.sprTrackerOffsetX = -songText.width / 2;
+			var iconBack:HealthIcon = new HealthIcon(songs[i].songCharacter);
+			iconBack.sprTracker = songText;
+			iconBack.sprTrackerOffsetX = -(iconBack.sprTracker.width+12) + iconBack.width;// + songText.width / 2;
+			iconBack.flipX = true;
 
 			// using a FlxGroup is too much fuss!
 			iconArray.push(icon);
+			iconArrayBack.push(iconBack);
 			add(icon);
+	//		add(iconBack);
 
-			// songText.x += 40;
+			 songText.x += 40;
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
-			// songText.screenCenter(X);
+			 songText.screenCenter(X);
 		}
 		WeekData.setDirectoryFromWeek();
 
@@ -459,11 +471,16 @@ class FreeplayState extends MusicBeatState
 		var bullShit:Int = 0;
 
 		for (i in 0...iconArray.length)
+			{
+				iconArray[i].alpha = 0.6;
+			}
+		for (i in 0...iconArrayBack.length)
 		{
-			iconArray[i].alpha = 0.6;
+			iconArrayBack[i].alpha = 0.6;
 		}
 
 		iconArray[curSelected].alpha = 1;
+		iconArrayBack[curSelected].alpha = 1;
 
 		for (item in grpSongs.members)
 		{

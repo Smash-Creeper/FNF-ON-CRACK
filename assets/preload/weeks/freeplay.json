@@ -1,0 +1,93 @@
+{
+	"songs": [
+		[
+			"there-are-birds-in-my-firefly",
+			"faelo",
+			[
+				204,
+				220,
+				223
+			]
+		],
+		[
+			"fnf-thing",
+			"bf",
+			[
+				253,
+				232,
+				113
+			]
+		],
+		[
+			"health-inspector",
+			"gbtemp",
+			[
+				174,
+				72,
+				245
+			]
+		],
+		[
+			"angus",
+			"evilangus",
+			[
+				6, 
+				84, 
+				209
+			]
+		],
+		[
+			"bobby-and-the-dorito-of-time",
+			"bobby",
+			[
+				237,
+				160,
+				26
+			]
+		],
+		[
+			"quite-the-sensation",
+			"gf",
+			[
+				112,
+				234,
+				255
+			]
+		],
+		[
+			"mortem-obire",
+			"smash",
+			[
+				0,
+				0,
+				0
+			]
+		],
+		[
+			"End",
+			"smash",
+			[
+				0,
+				0,
+				0
+			]
+		]
+	],
+	"hideFreeplay": false,
+	"weekBackground": "tank",
+	"weekCharacters": [
+		"tankman",
+		"bf",
+		"gf"
+	],
+	"storyName": "Crackhouse",
+	"weekName": "Crack",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": true,
+	"weekBefore": "week7",
+	"startUnlocked": true
+}

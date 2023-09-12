@@ -1,5 +1,6 @@
 package;
 
+//import cpp.Random;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -15,11 +16,14 @@ import flixel.text.FlxText;
 import flixel.math.FlxMath;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
 import flixel.util.FlxColor;
 import lime.app.Application;
 import Achievements;
 import editors.MasterEditorMenu;
 import flixel.input.keyboard.FlxKey;
+import flixel.math.FlxRandom;
+import Random;
 
 using StringTools;
 
@@ -35,6 +39,7 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = [
 		'story_mode',
 		'freeplay',
+		'arena_mode',
 		#if MODS_ALLOWED 'mods', #end
 		#if ACHIEVEMENTS_ALLOWED 'awards', #end
 		'credits',
@@ -239,6 +244,31 @@ class MainMenuState extends MusicBeatState
 										MusicBeatState.switchState(new StoryMenuState());
 									case 'freeplay':
 										MusicBeatState.switchState(new FreeplayState());
+									case 'arena_mode':
+//										MusicBeatState.switchState(new ArenaMenuState());
+										var songArray:Array<String> = Random.shuffle(["strow", "synth", "hes-got-a-gun", "lament", "i-just-got-shot", "against-the-sound", "encounter-with-angery-wavs", "ah", "there-are-birds-in-my-firefly", "fnf-thing", "health-inspector", "angus", "bobby-and-the-dorito-of-time", "quite-the-sensation", "armageddon"]);
+										songArray.push("venustrafobia");
+										songArray.push("End");
+										
+										trace(songArray);
+										// Nevermind that's stupid lmao
+										PlayState.storyPlaylist = songArray;
+										PlayState.isStoryMode = true;
+										PlayState.isArenaMode = true;
+										var diffic = "";
+										PlayState.arenaDifficulty = diffic;
+										
+										trace(diffic);
+										PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
+										PlayState.campaignScore = 0;
+										PlayState.campaignMisses = 0;
+
+										new FlxTimer().start(1, function(tmr:FlxTimer)
+										{
+											LoadingState.loadAndSwitchState(new PlayState(), true);
+											FreeplayState.destroyFreeplayVocals();
+										});
+
 									#if MODS_ALLOWED
 									case 'mods':
 										MusicBeatState.switchState(new ModsMenuState());

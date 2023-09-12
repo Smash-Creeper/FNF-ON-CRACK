@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="AngusMod.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Aero0000" x="0" y="0" width="483" height="197"/>
+	<SubTexture name="Angus0000" x="483" y="0" width="483" height="197"/>
+	<SubTexture name="Both0000" x="0" y="197" width="483" height="197"/>
+	<SubTexture name="None0000" x="483" y="197" width="483" height="197"/>
+</TextureAtlas>

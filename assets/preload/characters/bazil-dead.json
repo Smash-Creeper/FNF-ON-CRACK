@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				37,
+				11
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "bazil dies",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				37,
+				5
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "bazil corpse",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				37,
+				9
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "bazil lives",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BaZil Dies",
+	"position": [
+		0,
+		200
+	],
+	"healthicon": "baziltemp",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

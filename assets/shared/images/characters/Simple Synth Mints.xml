@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Simple Synth Mints.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Syn Down0000" x="0" y="0" width="496" height="655"/>
+	<SubTexture name="Syn Idle0000" x="496" y="0" width="454" height="665"/>
+	<SubTexture name="Syn Left0000" x="950" y="0" width="543" height="758"/>
+	<SubTexture name="Syn Right0000" x="0" y="758" width="621" height="624"/>
+	<SubTexture name="Syn Up0000" x="621" y="758" width="527" height="714"/>
+</TextureAtlas>

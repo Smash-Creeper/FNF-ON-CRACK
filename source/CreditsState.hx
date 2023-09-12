@@ -1,5 +1,6 @@
 package;
 
+import flixel.util.FlxTimer;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -81,6 +82,16 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
+			["Crackheads"],
+			['Smash Creeper',		'smash',			'Director and Programmer',										'https://www.twitch.tv/smash_creeper'				,	'444444'],
+			['Synth Mints',			'synth',			'Music Director\nLead Musician\nVoiceing Themself',				'https://twitter.com/Shadow_Mario_'					,	'444444'],
+			['BaldrekrGaming',		'bald',				'Icon Artist for Main Week\nLoading Screen Art',				'https://twitter.com/Shadow_Mario_'					,	'444444'],
+			['of9a',				'of9a',				'Artist for \'Health Inspector\' Song',							'https://twitter.com/Shadow_Mario_'					,	'444444'],
+			['Boneman',				'bobby',			'Artist for \'There are birds in my firefly\'\nAnd Voice of Bobby and Dairyman','https://twitter.com/Shadow_Mario_'	,	'444444'],
+			['v_eats_rocks',		'v',				'Voicing BaZil Botanic\nLore Help',								'https://twitter.com/Shadow_Mario_'					,	'444444'],
+			['gamingboi3',			'gamingboi',		'Voicing Himself',												'https://twitter.com/Shadow_Mario_'					,	'444444'],
+			['Botanically BaZil',	'bazil',			'Making Crackhouse',											'https://www.youtube.com/@BotanicallyBaZil/featured',	'444444'],
+			[''],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',								'https://twitter.com/Shadow_Mario_',	'444444'],
 			['RiverOaken',			'river',			'Main Artist/Animator of Psych Engine',							'https://twitter.com/RiverOaken',		'B42F71'],
@@ -205,7 +216,34 @@ class CreditsState extends MusicBeatState
 			}
 
 			if(controls.ACCEPT && (creditsStuff[curSelected][3] == null || creditsStuff[curSelected][3].length > 4)) {
-				CoolUtil.browserLoad(creditsStuff[curSelected][3]);
+				if(creditsStuff[curSelected][1] == 'smash' && !FlxG.keys.pressed.SHIFT){
+					var songArray:Array<String> = [];
+					songArray.push("against-the-sound");
+					songArray.push("encounter-with-angery-wavs");
+					songArray.push("ah");
+					
+					trace(songArray);
+					// Nevermind that's stupid lmao
+					PlayState.storyPlaylist = songArray;
+					PlayState.isStoryMode = true;
+					PlayState.isArenaMode = false;
+					PlayState.isSecretWeekMode = true;
+					var diffic = "";
+					PlayState.arenaDifficulty = diffic;
+					
+					trace(diffic);
+					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
+					PlayState.campaignScore = 0;
+					PlayState.campaignMisses = 0;
+
+					new FlxTimer().start(1, function(tmr:FlxTimer)
+					{
+						LoadingState.loadAndSwitchState(new PlayState(), true);
+						FreeplayState.destroyFreeplayVocals();
+					});
+				}else{
+					CoolUtil.browserLoad(creditsStuff[curSelected][3]);
+				}
 			}
 			if (controls.BACK)
 			{

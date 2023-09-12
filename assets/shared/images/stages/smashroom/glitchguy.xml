@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="glitchguy.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Glitch0000" x="0" y="0" width="714" height="484"/>
+	<SubTexture name="Glitch Guy0000" x="0" y="484" width="582" height="487"/>
+</TextureAtlas>

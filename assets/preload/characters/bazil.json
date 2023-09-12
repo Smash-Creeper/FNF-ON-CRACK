@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-62,
+				51
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "bazil right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-63,
+				50
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "bazil down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-66,
+				44
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "bazil up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "bazil idle"
+		},
+		{
+			"offsets": [
+				-62,
+				51
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "bazil left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Bazil",
+	"position": [
+		0,
+		270
+	],
+	"healthicon": "bazil",
+	"flip_x": true,
+	"healthbar_colors": [
+		69,
+		87,
+		58
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
